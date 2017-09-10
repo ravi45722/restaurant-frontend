@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	* {
+        margin: 0;
+        padding: 0;
+    }
+    html {
+    	height: 100%
+    }
+
+    .login-hyperlink {
+    	color: white;
+    	text-decoration: none;
+    	vertical-align: middle;
+    	font-size: 25px;
+    	font-stretch: 1px;
+    	font-family: "Arial";
+    	margin-top: 15px;
+    	margin-bottom: 15px;
+    	margin-left: 500px;
+    }
+	.hyperlink {
+    	color: white;
+    	text-decoration: none;
+    	vertical-align: middle;
+    	font-size: 25px;
+    	font-stretch: 1px;
+    	font-family: "Arial";
+    	margin-top: 15px;
+    	margin-bottom: 15px;
+    	padding-top: 15px;
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body ng-app="myApp" style="height: 100%">
+
+<div style="background-image: url(images/blog-04.jpg); background-position: center; background-size: cover; height: 100%" >
+	<div style="background-color: red; vertical-align: middle; height: 65px; width: 100%">
+		<img src="images/logo.png" style="margin: 10px; margin-left: 91px; float: left">
+
+			<span>
+				<div>
+					<a class="login-hyperlink" href="#!login">Login</a>
+					<a class="hyperlink">/</a>
+					<a class="hyperlink" href="#!signup">Sign up</a>
+				</div>
+			</span>
+		
+	</div>
+	<div ng-view></div>
+</div>
+
+
+
+<script src="src/app/pages/pages.modular.js"></script>
+<script src="src/app/pages/login/login.controller.js"></script>
+<script src="src/app/pages/menu/menu.controller.js"></script>
+<script src="src/app/pages/signup/signin.controller.js"></script>
+
+</body>
+
+</html>
