@@ -2,7 +2,7 @@ app.controller('loginController', function($scope,$http,$location) {
 	$scope.validateUser = function () {
 		$http({
 	    	method: 'POST',
-	    	url: 'http://172.16.23.20:6484/login',
+	    	url: 'http://172.16.23.27:6484/login',
 	    	headers: {
       				accept: 'application/json'
 			},

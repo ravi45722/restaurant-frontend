@@ -119,14 +119,4 @@ app.controller('menuController', function($scope,$http,$location) {
 	    	console.log('status'+response.status)
 	    })
 	}
-
-	$scope.slider = {
-	    minValue: 10,
-	    maxValue: 250,
-	    options: {
-	        floor: 0,
-	        ceil: 100,
-	        step: 1
-	    }
-	};
 })
