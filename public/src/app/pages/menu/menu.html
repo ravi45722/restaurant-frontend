@@ -15,6 +15,17 @@
 	    background-color: #FFF;
 	    color: #000;
 	}
+	.textbox {
+	    border: 1px solid #848484; 
+	    -webkit-border-radius: 30px; 
+	    -moz-border-radius: 30px; 
+	    border-radius: 30px; 
+	    outline:0; 
+	    height:35px; 
+	    width: 75px; 
+	    padding-left:10px; 
+	    padding-right:10px;
+	}
 	.liclass {
 	    float: left;
 	    border: 1px solid #000;
@@ -50,21 +61,30 @@
 			<table style="padding: 5px">
 				<tbody>
 					<tr ng-repeat="category in menu" ng-click="getSublist(category)">
-						<td style="font-size: 20px; border: thick;">{{category.Content}}</td>
+						<td style="font-size: 20px; border: thick;">{{category}}</td>
 					</tr>
 				</tbody>
 			</table>
+			<input class="textbox" type="text" name="min" placeholder="Min" ng-keyup="updateMin(min)" ng-model="min"> <br>
+			<input class="textbox" type="text" name="max" placeholder="Max" ng-keyup="updateMax(max)" ng-model="max">
 		</div>
+		<div>
+			
+		</div>
+		<!-- <div>
+		<rzslider rz-slider-model="slider.minValue"
+          rz-slider-high="slider.maxValue"
+          rz-slider-options="slider.options"></rzslider></div> -->
 
 		<div style="padding: 10px; float: left;">
 			
 		</div>
 
 		<div style="background-color: #F9E9E9; float: left; padding-right: 5px; padding-left: 5px">
-			Items Available in {{selectedCategory.Content}}
+			Items Available in {{selectedCategory}}
 			<table style="border-collapse: collapse;">
 				<tbody>
-					<tr ng-repeat="item in selectedCategory.Items" ng-click="basketList(selectedCategory.Content,item)">
+					<tr ng-repeat="item in subMenu" ng-click="basketList(selectedCategory,item)">
 						<td style="vertical-align: center; font-size: 20px; border: 1px solid #ddd; width: 550px; padding: 15px">{{item.item}}</td>
 						<td style="border: 1px solid #ddd; vertical-align: center;font-size: 20px; padding: 15px">{{item.value}}</td>
 					</tr>

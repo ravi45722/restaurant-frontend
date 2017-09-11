@@ -2,7 +2,7 @@ app.controller('signinController', function($scope,$http,$location) {
 	$scope.submitData = function () {
 		$http({
 			method: 'POST',
-			url: 'http://172.16.23.20:8000/restregister',
+			url: 'http://172.16.23.27:6484/restregister',
 			headers: {
       				accept: 'application/json'
 			},
