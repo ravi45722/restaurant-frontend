@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FP Tool</title>
+</head>
+
+<style type="text/css">
+	.button {
+	    background-color: #4CAF50; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 1.15vw 2.46vw;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 1.23vw;
+	}
+	.textbox {
+	    border: 1px solid #848484; 
+	    -webkit-border-radius: 2.30vw; 
+	    -moz-border-radius: 2.30vw; 
+	    border-radius: 2.30vw; 
+	    outline:0; 
+	    height:2.69vw; 
+	    width: 21.17vw; 
+	    padding-left:0.76vw; 
+	    padding-right:0.76vw;
+	}
+	table {
+		top: 50%;
+		left: 50%;
+	}
+
+	table.datatable {
+		border: 1px solid grey;
+		border-collapse: collapse;
+ 		padding: 5px;
+ 		margin: 0px auto;
+	}
+
+	table.datatable td {
+		border: 1px solid grey;
+		border-collapse: collapse;
+ 		padding: 5px;
+	}
+
+	table.datatable tr {
+		border: 1px solid grey;
+		border-collapse: collapse;
+ 		padding: 5px;
+	}
+
+	table.datatable tr:nth-child(even) {
+		background-color: #ffffff;
+	}
+
+	table.datatable tr:nth-child(even) {
+		background-color: #ffffff;
+	}	
+
+</style>
+
+<body>
+	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+ 
+		<img src="/w3images/avatar_smoke.jpg" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>ABOUT</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+	<div>
+		<table style="padding-left: 10vw; padding-top: 1.54vw; border-spacing: 0.76vw">
+			<tr>
+				<td><input class="textbox" type="text" name="sid" placeholder="Enter a Sid" ng-model="sid"></td>
+				<td><input class="textbox" type="text" name="ip_address" placeholder="Enter IP Address" ng-model="ip_address"></td>
+				<td style="padding-left: 7.69vw;"><input class="button" type="button" name="Submit" value="Submit" ng-click="submitData()"></td>
+			</tr>
+		</table>
+	</div>
+
+
+	<div id="result" style="display: none">
+		<table class="datatable">
+			<tr>
+				<td>SID</td>
+				<td>IP</td>
+				<td>Reason</td>
+				<td>Source</td>
+			</tr>
+			<tr ng-repeat="reason in reasons_data">
+				<td>{{ reason.sid }}</td>
+				<td>{{ reason.ip_address }}</td>
+				<td>{{ reason.reason }}</td>
+				<td>{{ reason.source }}</td>
+			</tr>
+		</table>
+	</div>
+
+
+</body>
+
+</html>

@@ -45,7 +45,7 @@
 </style>
 
 <body style="height: 100%">
-	<div style="float: right; ">
+	<!-- <div style="float: right; ">
 		<table style="margin-right: 390px; margin-top: 250px; border-spacing: 10px">
 			<tr>
 				<td><input class="username-textbox" type="text" name="passport" placeholder="Passport Number" ng-model="passport"></td>
@@ -53,7 +53,34 @@
 				<td><input class="button" type="button" name="Submit" value="Submit" ng-disabled="disableSubmit" ng-click="validateUser()"></td>
 			</tr>
 		</table>
-	</div>
+	</div> -->
+
+	<div class="inner" style="background-color: white; margin: 0px auto; width: 400px">
+			<table class="logintable" style="height: 44vh">
+				<tr>
+					<td>
+						<img src="images/logo.png" style="height:4.2vw"
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label>Email Address</label> 
+						<input class="logintable-textbox" type="text" name="username" placeholder="Enter your email address..." ng-model="username">
+					</td>
+				<tr>
+					<td>
+						<label>Password</label> 
+						<input class="logintable-textbox" type="password" name="password" placeholder="Enter Password" ng-model="password">
+					</td>
+				</tr>
+				<tr>
+					<td><input type="button" name="Submit" value="Submit" ng-click="validateUser()"></td>
+				</tr>
+			</table>
+		</div>	 
+
+		
+
 </body>
 
 </html>
